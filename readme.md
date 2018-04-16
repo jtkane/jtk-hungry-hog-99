@@ -1,3 +1,3 @@
 # jtk Test Module
 
-This is a test module. Please ignore!
+This is an npm test module. Please ignore!
