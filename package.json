@@ -4,7 +4,8 @@
   "description": "This is an npm test module. Please ignore!",
   "main": "index.js",
   "scripts": {
-    "test": "tap --coverage test/index.js"
+    "test": "tap --coverage test/index.js",
+    "posttest": "standard"
   },
   "repository": {
     "type": "git",
