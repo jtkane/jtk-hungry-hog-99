@@ -1,13 +1,14 @@
 module.exports = generateRandomString
 
-const adjectives = require('adjectives')
 const animals = require('animals')
 const randomNumber = require('random-number-in-range')
 
-function generateRandomString () {
-  return [randomAdjective(), animals(), randomNumber(10, 99)].join('-')
-}
+const randomAdjective = require('./lib/random-adjective')
 
-function randomAdjective () {
-  return adjectives[randomNumber(0, adjectives.length - 1)]
+function generateRandomString (num) {
+  if (typeof num === 'number') {
+    return Array(num).fill().map(generateRandomString)
+  }
+
+  return [randomAdjective(), animals(), randomNumber(10, 99)].join('-')
 }

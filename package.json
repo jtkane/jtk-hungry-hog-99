@@ -4,6 +4,7 @@
   "description": "This is an npm test module. Please ignore!",
   "main": "index.js",
   "scripts": {
+    "coverage": "nyc report --reporter=text-lcov",
     "test": "tap --coverage test/index.js",
     "posttest": "standard"
   },
